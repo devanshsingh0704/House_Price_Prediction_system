@@ -1,0 +1,11 @@
+# Pinned: the metrics in README.md are reproducible only against these versions.
+# Loose ranges (pandas>=2.0) meant a fresh install could score differently.
+pandas==3.0.5
+numpy==2.5.3
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+jupyter==1.1.1
+joblib==1.6.0
+# Dashboard only (app.py). The models and CLI do not need it.
+streamlit==1.63.0

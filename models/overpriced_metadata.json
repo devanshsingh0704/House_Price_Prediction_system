@@ -1,0 +1,77 @@
+{
+  "trained_on": "2026-09-15",
+  "sklearn_version": "1.9.1",
+  "task": "binary classification: price/sqft above locality median",
+  "label_thresholds_from": "training rows only",
+  "selected_model": "RandomForestClassifier",
+  "selected_by": "highest 5-fold CV ROC-AUC on training rows",
+  "features": [
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony",
+    "area_type",
+    "location"
+  ],
+  "rows": {
+    "train": 8641,
+    "test": 2161
+  },
+  "class_balance": {
+    "train_positive": 0.4913,
+    "test_positive": 0.4743
+  },
+  "cv_roc_auc": {
+    "Baseline(most frequent)": {
+      "mean": 0.5,
+      "std": 0.0
+    },
+    "LogisticRegression": {
+      "mean": 0.5949474866577894,
+      "std": 0.010143242166951304
+    },
+    "RandomForestClassifier": {
+      "mean": 0.6878108346701973,
+      "std": 0.01096955412982933
+    }
+  },
+  "test_metrics": {
+    "Baseline(most frequent)": {
+      "accuracy": 0.5256825543729755,
+      "roc_auc": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "LogisticRegression": {
+      "accuracy": 0.6390559925960203,
+      "roc_auc": 0.663360958433528,
+      "precision": 0.6601307189542484,
+      "recall": 0.4926829268292683,
+      "f1": 0.5642458100558659
+    },
+    "RandomForestClassifier": {
+      "accuracy": 0.6621934289680703,
+      "roc_auc": 0.7226893679148059,
+      "precision": 0.6685714285714286,
+      "recall": 0.5707317073170731,
+      "f1": 0.6157894736842106
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "at/below median",
+      "above median"
+    ],
+    "rows_actual_cols_predicted": [
+      [
+        846,
+        290
+      ],
+      [
+        440,
+        585
+      ]
+    ]
+  }
+}
